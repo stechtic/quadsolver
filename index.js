@@ -32,7 +32,7 @@ function calculate() {
     if (discriminant === 0) {
         message.textContent = "Roots are real and equal: ";
     } else {
-        message.textContent = "Roots are real and unequal: " + root1;
+        message.textContent = "Roots are real and unequal: ";
     }
 }
 
