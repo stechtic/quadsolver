@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("background.jpg") center center no-repeat;
+    background-size:cover;
+    font-size:12vw;
+    overflow-x:hidden;
+    text-align:center;
+    color:white;
+}
+#example{
+    font-size:10vh;
+    font-family: 'Pacifico', cursive;
+}
+.inputs{
+    margin:0;
+    height: 7vh;
+    width: 28vw;
+    font-size:6vw;
+}
+#btn{
+    font-size:10vw;
+    padding:4vw;
+    border-radius: 5vw;
+    margin-top:2vh;
+}
+#footer{
+    background: black;
+    width: 100vw;
+    height: auto;
+    background: #111111;
+    font-family: 'Brush Script MT', cursive;
+    margin-top:20vh;
+    color:white;
+    font-size:8vw;
+    text-align:left;
+}
+.footer-top{
+    text-align:center;
+    padding:3vh 1vw;
+    font-weight:bold;
+    font-size:8vw;
+    border-bottom:3px solid purple;
+}
+#contact{
+    width: 70vw;
+    margin:auto;
+}
+#contact>h1{
+    text-align:center;
+    margin:2vh;
+}
+#contact button{
+    padding:2vh;
+    border-radius: 13px;
+    background: #0098ffc9;
+    width: 100%;
+    margin:4vh 0;
+}
+.contact-input{
+    display:block;
+    width:100%;
+    margin:2vh 0;
+    font-size:8vw;
+}
+#comment{
+    height: 20vh;
+    width: 100%;
+    font-size:8vw;
+}
+#margin-gap{
+    border-bottom:3px solid purple;
+    width: 100vw;
+    margin:3vh 0;
+    margin-bottom:0;
+    font-size:8vw;
+}
+marquee{
+    margin: 3vh 0;
+}
+#saveData{
+    font-size:8vw;
+}

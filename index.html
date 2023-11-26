@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Quadritic Equations Solver|Siddhant Developers</title>
+</head>
+<body>
+    <br>
+    <div>Quadritics Equations Solver</div>
+    <div id="example">
+        ax<sup>2 </sup>&#177; bx&#177; c
+    </div>
+    <div>
+        Enter the values of<br> a , b and c
+    </div>
+    <br>
+    <div>
+        <input type="text" id="a" class="inputs" placeholder="&nbsp;value of a"  oninput="this.value = this.value.replace(/^(-?(?:\d+(?:\/\d*)?)?).*$/, '$1')">
+        <input type="text" id="b" class="inputs" placeholder="&nbsp;value of b"  oninput="this.value = this.value.replace(/^(-?(?:\d+(?:\/\d*)?)?).*$/, '$1')">
+        <input type="text" id="c" class="inputs" placeholder="&nbsp;value of c"  oninput="this.value = this.value.replace(/^(-?(?:\d+(?:\/\d*)?)?).*$/, '$1')">
+
+    </div>
+    <br>
+    <div><button id="btn" onclick="calculate()">CALCULATE ANSWER</button></div>
+    <br>
+    <div>
+        <hr>
+        <br>
+        Answer
+    </div>
+    <br>
+    <div id="message"></div>
+    <br>
+    <div>
+        Values of x:
+    </div>
+    <div>
+        x = <span id="x1"></span> or <span id="x2"></span>
+    </div>
+     <footer id="footer">
+         <hr>
+         <div class="footer-top">
+              Siddhant Developers&copy;   
+         </div> 
+         
+          <form id="contact">
+              <h1>Contact Us</h1>
+              Enter Your Name
+              <input type="text" id="name" autocomplete="off" class="contact-input">
+              Enter Your email
+              <input type="email" id="email" autocomplete="off" class="contact-input">
+              Enter your comment/queries
+              <textarea id="comment" autocomplete="off" form="contact" maxlength="50" placeholder="Maximum 50 characters are allowed"></textarea>
+              <button id="saveData">Submit Now</button>              
+          </form>
+          <div id="margin-gap"> 
+          </div>
+          <marquee>Thanks for visiting our website.Stay tuned till our next awesome project :-Siddhant Developers&copy; 2023</marquee>  
+          </div>
+     </footer>
+    <script src="index.js"></script>
+    <script type="module">
+  
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+  import { getDatabase,ref,set,get,child,update,remove} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAZ2xZ3efF6DLIG7Y0ZFQlftllEd6RDXy4",
+    authDomain: "football-96b78.firebaseapp.com",
+    databaseURL: "https://football-96b78-default-rtdb.firebaseio.com",
+    projectId: "football-96b78",
+    storageBucket: "football-96b78.appspot.com",
+    messagingSenderId: "14362604757",
+    appId: "1:14362604757:web:c26c825e19938cd4011e5c"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase();
+  
+  //getting all the values
+  
+  let name = document.getElementById("name");
+  let email = document.getElementById("email");
+  let com = document.getElementById("comment");
+  
+  let saveData = document.getElementById("saveData"); 
+  saveData.addEventListener('click', AddData);
+  
+  function AddData() {
+  event.preventDefault(); 
+      set(ref(db,"quadritics/"+ name.value),{
+          Name:name.value,
+          Email:email.value,
+          Comment:com.value
+      })
+      alert("Feedback shared succesfully");
+      name.value="";
+      email.value="";
+      com.value="";        
+  }
+</script>
+</body>
+</html>
