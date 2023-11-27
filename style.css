@@ -21,8 +21,8 @@ body{
     font-size:6vw;
 }
 #btn{
-    font-size:10vw;
-    padding:3.5vw;
+    font-size:9vw;
+    padding: 4vw 3.5vw;
     border-radius: 5vw;
     margin-top:2vh;
 }
@@ -51,10 +51,11 @@ body{
 #contact>h1{
     text-align:center;
     margin:2vh;
+    font-size:15vw;
 }
 #contact button{
     padding:2vh;
-    border-radius: 13px;
+    border-radius: 3vw;
     background: #0098ffc9;
     width: 100%;
     margin:4vh 0;
